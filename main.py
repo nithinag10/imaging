@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify, render_template_string
 import base64
 from io import BytesIO
 from dotenv import load_dotenv
+import os
 
 from openai import OpenAI
 

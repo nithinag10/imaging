@@ -14,7 +14,7 @@ app = Flask(__name__)
 load_dotenv()
 
 
-client = OpenAI(api_key="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")
+client = OpenAI(os.getenv("OPEN_AI_KEY"))
 
 
 @app.route('/', methods=['GET', 'POST'])

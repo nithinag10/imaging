@@ -61,7 +61,7 @@ def index():
         )
 
         content = response.choices[0].message.content
-        similar_scoāre = content.split('SIMILAR:')[-1].strip()
+        similar_score = content.split('SIMILAR:')[-1].strip()
         total_tokens_used = response.usage.total_tokens
 
         result = f"Similarity Score: {similar_score}, Total Tokens Used: {total_tokens_used}"

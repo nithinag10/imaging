@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 load_dotenv()
 
-
+print(os.getenv("OPEN_AI_KEY"))
 client = OpenAI(os.getenv("OPEN_AI_KEY"))
 
 

@@ -4,7 +4,6 @@ import base64
 from io import BytesIO
 from dotenv import load_dotenv
 import os
-
 from openai import OpenAI
 
 
@@ -14,8 +13,7 @@ app = Flask(__name__)
 
 load_dotenv()
 
-print(os.getenv("OPEN_AI_KEY"))
-client = OpenAI(os.getenv("OPEN_AI_KEY"))
+client = OpenAI(api_key=os.getenv("OPEN_AI_KEY"))
 
 
 @app.route('/', methods=['GET', 'POST'])
